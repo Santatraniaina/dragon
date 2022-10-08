@@ -1,17 +1,16 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "dragon_base",
+    'name': "Dragon Module",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+        Dragon module for practise""",
 
     'description': """
-        Long description of module's purpose
+        This is a sample practise to initiate Odoo and take example of Student Management for practising
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "KASIA",
+    'website': "http://www.kasia.com",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
@@ -24,8 +23,8 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
-        'views/views.xml',
+        'security/ir.model.access.csv',
+        'views/student_base_views.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode
