@@ -1,0 +1,21 @@
+<odoo>
+  <data>
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="res_partner_action">
+      <field name="name">Professor</field>
+      <field name="res_model">res.partner</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Top menu item -->
+    <menuitem name="Student Management" id="student_base_root"/>
+
+    <!-- menu categories -->
+    <menuitem name="Student" id="student_base_menu" parent="student_base_root"/>
+
+    <!-- actions -->
+    <menuitem name="Professor" id="res_partner_menu_list" parent="student_base_menu" action="res_partner_action"/>
+
+  </data>
+</odoo>

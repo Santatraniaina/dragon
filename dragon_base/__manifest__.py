@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Dragon Module",
+    'name': "dragon_base",
 
     'summary': """
         Dragon module for practise""",
@@ -25,6 +25,8 @@
     'data': [
         'security/ir.model.access.csv',
         'views/student_base_views.xml',
+        'views/student_class_views.xml',
+        'views/res_partner_views.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode
