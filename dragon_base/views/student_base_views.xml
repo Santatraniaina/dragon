@@ -28,9 +28,9 @@
                 <field name="matricule"/>
               </group>
               <group>
-                <field name="name"/>
-                <field name="lastname"/>
-                <field name="birth_date"/>
+                <field name="name" required="True"/>
+                <field name="lastname" required="True"/>
+                <field name="birth_date" required="True"/>
                 <field name="age"/>
               </group>
             </group>

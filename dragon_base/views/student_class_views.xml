@@ -21,8 +21,8 @@
         <form string="student_class_form">
           <sheet>
             <group>
-              <field name="name"/>
-              <field name="student_number"/>
+              <field name="name" required="True"/>
+              <field name="student_number" required="True"/>
               <field name="stage"/>
             </group>
           </sheet>
