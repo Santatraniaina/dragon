@@ -3,14 +3,14 @@
     <data>
 
         <!-- Inherit Form View to Modify it -->
-        <record id="professor_form_view" model="ir.ui.view">
-            <field name="name">professor.form.view</field>
+        <record id="res_partner_form_view" model="ir.ui.view">
+            <field name="name">res.partner.form.view</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
 
                 <xpath expr="//field[@name='vat']" position="after">
-                    <field name="tif" required='True'/>
+                    <field name="nif" required='True'/>
                     <field name="stat" />
                     <field name="rcs"/>
                 </xpath>
@@ -18,14 +18,14 @@
             </field>
         </record>
 
-        <record id="professor_list_view" model="ir.ui.view">
-            <field name="name">professor.list.view</field>
+        <record id="res_partner_list_view" model="ir.ui.view">
+            <field name="name">res.partner.list.view</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_tree"/>
             <field name="arch" type="xml">
 
                 <xpath expr="//field[@name='email']" position="after" >
-                    <field name="tif" optional="hide"/>
+                    <field name="nif" optional="hide"/>
                     <field name="stat" optional="hide"/>
                     <field name="rcs" optional="hide"/>
                 </xpath>
@@ -40,13 +40,7 @@
           <field name="view_mode">tree,form</field>
         </record>
 
-        <!-- Top menu item -->
-        <menuitem name="Student Management" id="student_base_root"/>
-
-        <!-- menu categories -->
-        <menuitem name="Student" id="student_base_menu" parent="student_base_root"/>
-
         <!-- actions -->
-        <menuitem name="Professor" id="professor_menu_list" parent="student_base_menu" action="res_partner_action"/>
+        <menuitem name="Professor" id="res_partner_menu_list" parent="student_base_menu" action="res_partner_action"/>
     </data>
 </odoo>

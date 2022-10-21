@@ -7,6 +7,7 @@
       <field name="model">student.base</field>
       <field name="arch" type="xml">
         <tree>
+          <field name="student_number"/>
           <field name="matricule"/>
           <field name="name"/>
           <field name="lastname"/>
@@ -22,8 +23,14 @@
       <field name="arch" type="xml">
         <form string="student_base_form">
           <sheet>
-            <group>
+            <div>
+              <div>
+                <h1>
+                  <field name="student_number"/>
+                </h1>
+              </div>
               <group>
+                <group>
                 <field name="photo" widget="image"/>
                 <field name="matricule"/>
               </group>
@@ -33,13 +40,12 @@
                 <field name="birth_date" required="True"/>
                 <field name="age"/>
               </group>
-            </group>
+              </group>
+            </div>
           </sheet>
         </form>
       </field>
     </record>
-
-    <!-- actions opening views on models -->
 
     <record model="ir.actions.act_window" id="student_base_action">
       <field name="name">Student</field>
@@ -49,10 +55,8 @@
 
     <!-- Top menu item -->
     <menuitem name="Student Management" id="student_base_root"/>
-
     <!-- menu categories -->
     <menuitem name="Student" id="student_base_menu" parent="student_base_root"/>
-
     <!-- actions -->
     <menuitem name="Student" id="student_base_menu_list" parent="student_base_menu" action="student_base_action"/>
 

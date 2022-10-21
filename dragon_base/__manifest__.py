@@ -29,11 +29,12 @@
         'security/ir.model.access.csv',
         'views/student_base_views.xml',
         'views/student_class_views.xml',
-        # 'views/res_partner_views.xml',
-        'views/professor_views.xml',
+        'views/res_partner_views.xml',
         'views/templates.xml',
+        'data/student_base_sequence.xml',
+        'data/student_class_sequence.xml',
     ],
-    # only loaded in demonstration mode
+    # only loaded in demonstration modes
     'demo': [
         'demo/demo.xml',
     ],

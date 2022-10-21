@@ -1,2 +1,0 @@
-id,matricule,name,lastname,birth_date,age,perm_read,perm_write,perm_create,perm_unlink
-access_student_base,student.base,model_student_base,base.group_user,1,1,1,1

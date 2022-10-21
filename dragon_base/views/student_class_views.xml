@@ -1,12 +1,12 @@
 <odoo>
   <data>
     <!-- explicit list view definition -->
-
     <record model="ir.ui.view" id="student_class_tree_view">
       <field name="name">student.class.tree.view</field>
       <field name="model">student.class</field>
       <field name="arch" type="xml">
         <tree>
+          <field name="student_class"/>
           <field name="name"/>
           <field name="student_number"/>
           <field name="stage"/>
@@ -20,6 +20,9 @@
       <field name="arch" type="xml">
         <form string="student_class_form">
           <sheet>
+            <h1>
+              <field name="student_class"/>
+            </h1>
             <group>
               <field name="name" required="True"/>
               <field name="student_number" required="True"/>
@@ -31,18 +34,11 @@
     </record>
 
     <!-- actions opening views on models -->
-
     <record model="ir.actions.act_window" id="student_class_action">
       <field name="name">Class</field>
       <field name="res_model">student.class</field>
       <field name="view_mode">tree,form</field>
     </record>
-
-    <!-- Top menu item -->
-    <menuitem name="Student Management" id="student_base_root"/>
-
-    <!-- menu categories -->
-    <menuitem name="Student" id="student_base_menu" parent="student_base_root"/>
 
     <!-- actions -->
     <menuitem name="Class" id="student_class_menu_list" parent="student_base_menu" action="student_class_action"/>

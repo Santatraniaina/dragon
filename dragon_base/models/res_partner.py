@@ -1,8 +1,8 @@
 from odoo import fields, models
 
-class Professor(models.Model):
+class ResPartner(models.Model):
     _inherit = 'res.partner'
 
-    tif = fields.Char(string='TIF')
+    nif = fields.Char(string='NIF')
     stat = fields.Char(string='STAT')
     rcs = fields.Char(string='RCS')
