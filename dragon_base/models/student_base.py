@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
-
+from odoo import models, fields, api, _
 class StudentBase(models.Model):
     _name = 'student.base'
     _description = "Student's table"
@@ -20,3 +19,12 @@ class StudentBase(models.Model):
            vals['student_number'] = self.env['ir.sequence'].next_by_code('student.base') or 'New'
        res = super(StudentBase, self).create(vals)
        return res
+
+    def create_wizard(self):
+        return {
+            'name': _('Attend Class Wizard'),
+            'type': 'ir.actions.act_window',
+            'res_model': 'attend.class.wizard',
+            'view_mode': 'form',
+            'target': 'new'
+        }

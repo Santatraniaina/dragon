@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="attend_class_wizard_form_view" model="ir.ui.view">
+            <field name="name">attend.class.wizard.form</field>
+            <field name="model">attend.class.wizard</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group class="oe_title">
+                            <h4>Select the class that you want to attend</h4>
+                            <field name="class_id"/>
+                        </group>
+                        <footer>
+<!--                        <button string='Attend class' type='object' name='attend_class' class='btn-primary'/>-->
+                            <button string='Cancel' class='btn-default' special='cancel'/>
+                        </footer>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="attend_class_wizard_action" model="ir.actions.act_window">
+            <field name="name">Attend Class Wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">attend.class.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="attend_class_wizard_form_view"/>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</odoo>

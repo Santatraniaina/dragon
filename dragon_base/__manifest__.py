@@ -33,6 +33,7 @@
         'views/templates.xml',
         'data/student_base_sequence.xml',
         'data/student_class_sequence.xml',
+        'wizard/attend_class_wizard_view.xml',
     ],
     # only loaded in demonstration modes
     'demo': [

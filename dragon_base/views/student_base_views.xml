@@ -22,6 +22,9 @@
       <field name="model">student.base</field>
       <field name="arch" type="xml">
         <form string="student_base_form">
+          <header>
+              <button name="create_wizard" string="Attend class" type="object" />
+          </header>
           <sheet>
             <div>
               <div>
